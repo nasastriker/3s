@@ -1,0 +1,19 @@
+{
+  "name": "nasastriker",
+  "version": "0.0.0",
+  "authors": [
+    "Insayt <nasastriker88@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app",
+    "test"
+  ],
+  "dependencies": {
+    "jquery": "2.*",
+    "bootstrap": "^3.3.7"
+  }
+}
