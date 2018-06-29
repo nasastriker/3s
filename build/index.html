@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -21,7 +23,9 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">Brand</a>
+					<a class="navbar-brand" href="#">
+						<img src="img/3s_logo.png" alt="">
+					</a>
 				</div>
 
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -46,12 +50,13 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<h1>Партнерская сеть 3snet предлагает</h1>
+					<div class="separator"><span></span></div>
 					<h2>Бинарные опционы, форекс, гэмблинг, беттинг — трафик, лиды, депозиты!</h2>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-6">
+		<div class="row headDescription">
+			<div class="col-md-6 headDescription_item">
 				<h3>НАЗВАНИЕ 1</h3>
 				<ul>
 					<li>Рекламодателям - трафик</li>
@@ -74,7 +79,7 @@
 				</ul>
 				<a href="" class="btn">Войти в 3snet</a>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 headDescription_item">
 				<h3>НАЗВАНИЕ 2</h3>
 				<ul>
 					<li>Рекламодателям - трафик</li>
@@ -102,13 +107,80 @@
 </header>
 
 <section class="ourAdvertisers">
+	<div class="ourAdvertisers_shabow"></div>
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
 				<h3>Наши рекламодатели</h3>
+				<div class="separator"><span></span></div>
+
 			</div>
 			<div class="col-12">
-				<img src="" alt="">
+				<div class="owl-carousel owl-theme ourAdvertisers-carousel">
+					<div class="item">
+						<h4>#кейсы</h4>
+						<div class="item_img">
+							<img src="img/gulp_stylus.png" alt="">
+						</div>
+						<h5 class="title">Лей, пока горячо</h5>
+						<p>Давно работаю в партнерском бизнесе и знаю, что одним из самых качественных источников трафика является е-мейл рассылка.</p>
+						<a href="#" class="btn showMore">Подробнее</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<img src="img/mastercard_ico.png" alt="">
+			</div>
+			<div class="col-md-3">
+				<img src="img/visa_ico.png" alt="">
+			</div>
+			<div class="col-md-3">
+				<img src="img/qiwi_ico.png" alt="">
+			</div>
+			<div class="col-md-3">
+				<img src="img/yandexmoney_ico.png" alt="">
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="casesNews">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h3>Кейсы, конкунрсы, новости</h3>
+				<div class="separator"><span></span></div>
+			</div>
+			<div class="col-12">
+				<div class="owl-carousel owl-theme casesNews-carousel">
+					<div class="item">
+						<h4>#кейсы</h4>
+						<div class="item_img">
+							<img src="img/gulp_stylus.png" alt="">
+						</div>
+						<h5 class="title">Лей, пока горячо</h5>
+						<p>Давно работаю в партнерском бизнесе и знаю, что одним из самых качественных источников трафика является е-мейл рассылка.</p>
+						<a href="#" class="btn showMore">Подробнее</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="subscrabeBox">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<p>
+					Подписка, подпищись....Захват контактов, будь в курсе новостей (ссылка на новости)
+				</p>
+			</div>
+			<div class="col-md-4">
+				<form action="">
+					<input type="text" placeholder="Email" name="mail">
+					<button></button>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -116,8 +188,53 @@
 
 
 
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<a href="#">
+					<img src="img/3s_logo.png" alt="">
+				</a>
+			</div>
+			<div class="col-md-3">
+				<h5>Меню</h5>
+				<ul>
+					<li><a href="#">Кто мы</a></li>
+					<li><a href="">Рекламодатели</a></li>
+					<li><a href="">Блог</a></li>
+					<li><a href="">Вакансии</a></li>
+					<li><a href="">Контакты</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3">
+				<h5>Контакты</h5>
+				<div class="c-item">
+					<div>Для рекламодателей</div>
+					<p>info@3snet.ru</p>
+				</div>
+				<div class="c-item">
+					<div>Для партнёров</div>
+					<p>support@3snet.ru</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<h5>Мы в соцсетях</h5>
+				<div class="row">
+					<div class="col-4"><a href="#"><img src="" alt=""></a></div>
+					<div class="col-4"><a href="#"><img src="" alt=""></a></div>
+					<div class="col-4"><a href="#"><img src="" alt=""></a></div>
+					<div class="col-4"><a href="#"><img src="" alt=""></a></div>
+					<div class="col-4"><a href="#"><img src="" alt=""></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
