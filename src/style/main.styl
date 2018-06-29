@@ -4,8 +4,41 @@
 	outline none
 	text-decoration none
 cyan = #40f3f7
+
+.fl-left
+	float left
+.fl-right
+	float right
+	
 img
 	width 100%
+a.btn
+	&.yellowGrd
+		border: 2px solid #ffcc00;
+		background: #ff7700;
+		background: -webkit-gradient(linear, left top, left bottom, from(#ffe100), to(#ff7700));
+		background: -webkit-linear-gradient(top, #ffe100, #ff7700);
+		background: -moz-linear-gradient(top, #ffe100, #ff7700);
+		background: -ms-linear-gradient(top, #ffe100, #ff7700);
+		background: -o-linear-gradient(top, #ffe100, #ff7700);
+		background-image: -ms-linear-gradient(top, #ffe100 0%, #ff7700 100%);
+		padding: 11px 22px;
+		border-radius: 6px;
+		box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+		color: #000000
+		font-size: 14px
+		font-family: helvetica, serif
+		text-decoration: underline
+	&.showMore
+		border: 2px solid #fff
+		color: #fff
+		border-radius: 15px
+		background: #40f3f782
+		padding: 10px 25px
+		transition all .5s
+		&:hover
+			background transparent
+
 body
 	background: url(/img/head_bg.jpg) fixed center 0px
 	background-size: 120% 120%
@@ -22,25 +55,60 @@ body
 	z-index: 2;
 	width: 100%;
 header
-	padding: 120px 0
+	padding: 120px 0 0
 	h1
 		text-align center
 		color #FFF
 	h2
 		color cyan
+		text-align: center
+		margin-bottom: 40px
 	.headDescription
-		
+		position relative
 		&_item
+			margin 0
+			padding 0
+			h3
+				display: inline-block
+				padding: 10px 25px
+				background: #40f3f7
+				border-radius: 10px
+				color #0d202f
+				margin 30px 0
 			&:first-child
 				color #fff
-				text-align right
+				text-align left
+				&Wrapper
+					float right
 			&:nth-child(2)
 				background #40f3f7c4
+				text-align right
+				h3
+					color #fff
+					background #0d202f
 			ul
 				list-style none
+				margin-bottom 30px
+			&Wrapper
+				width 330px
+				position relative
+				margin-bottom 60px
+				.vsBox
+					position: absolute
+					background: #fff
+					width: 200px
+					height: 200px
+					display: flex
+					align-items: center
+					border-radius: 50%
+					padding: 50px
+					top: 50%
+					left: 0%
+					transform: translate(-50%, -50%)
+					box-shadow: 3px 8px 20px #0000008a
 .separator
 	display: flex
-	justify-content: space-between
+	justify-content: center
 	align-items: center
 	margin: 25px 0 40px
 	span
@@ -55,13 +123,15 @@ header
 		display block
 		height 1px
 		width 49%
+		max-width 300px 
 		background #ffffff94 
 section
 	h3
 		text-align center
 		color #fff
 .ourAdvertisers
-	background: #fff url(/img/moon.png) no-repeat 0px
+	background: #fff url(/img/moon.png) no-repeat
+	background-position: 50% 351px;
 	background-size: 85%
 	padding: 40px 0 180px
 	position relative
@@ -71,7 +141,7 @@ section
 		color #6d6d6d
 	&_shabow
 		position: absolute
-		height: 141px
+		height: 100%
 		bottom: 0
 		width: 146%
 		left: -50%
@@ -85,7 +155,15 @@ section
 .casesNews
 	color #fff
 	padding 40px 0
-
+	h4
+		color cyan
+	.item_img
+		margin-bottom 30px
+	.title
+		font-weight bold
+		margin-bottom 20px
+	.showMore
+		float right
 .subscrabeBox
 	background cyan
 	padding 20px
