@@ -3,6 +3,8 @@
 	margin 0
 	outline none
 	text-decoration none
+
+
 cyan = #40f3f7
 
 .fl-left
@@ -13,22 +15,20 @@ cyan = #40f3f7
 img
 	width 100%
 a.btn
+button.btn
 	&.yellowGrd
 		border: 2px solid #ffcc00;
-		background: #ff7700;
-		background: -webkit-gradient(linear, left top, left bottom, from(#ffe100), to(#ff7700));
-		background: -webkit-linear-gradient(top, #ffe100, #ff7700);
-		background: -moz-linear-gradient(top, #ffe100, #ff7700);
-		background: -ms-linear-gradient(top, #ffe100, #ff7700);
-		background: -o-linear-gradient(top, #ffe100, #ff7700);
-		background-image: -ms-linear-gradient(top, #ffe100 0%, #ff7700 100%);
-		padding: 11px 22px;
-		border-radius: 6px;
-		box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+		background: rgba(255,226,5,1);
+		background: linear-gradient(to bottom, rgba(255,226,5,1) 63%, rgba(255,118,5,1) 100%)
 		color: #000000
 		font-size: 14px
 		font-family: helvetica, serif
 		text-decoration: underline
+		transition all .5s ease
+		&:hover
+			background-color: rgba(255,225,0,0.57)
+			box-shadow: 0 0 18px 5px rgba(0,229,255,0.65)
+			background: linear-gradient(to bottom, #ffed67 63%, #ffb405 100%)
 	&.showMore
 		border: 2px solid #fff
 		color: #fff
@@ -44,6 +44,7 @@ body
 	background-size: 120% 120%
 	transition: all 2s ease-out
 	background-repeat: no-repeat
+	font-family: 'Fira Sans', sans-serif
 	
 .navbar
 	box-shadow: none;
@@ -89,6 +90,8 @@ header
 			ul
 				list-style none
 				margin-bottom 30px
+				font-weight: 400
+				font-size: 15px
 			&Wrapper
 				width 330px
 				position relative
@@ -96,8 +99,8 @@ header
 				.vsBox
 					position: absolute
 					background: #fff
-					width: 200px
-					height: 200px
+					width: 180px
+					height: 180px
 					display: flex
 					align-items: center
 					border-radius: 50%
@@ -166,9 +169,42 @@ section
 		float right
 .subscrabeBox
 	background cyan
-	padding 20px
-	margin 10px 0 20px 
-
+	padding 30px 0
+	margin 10px 0 20px
+	p
+		font-size: 18px
+		max-width: 400px
+		font-weight: 500
+		text-align: right
+		float: right
+	form
+		display flex
+		input
+			height: 50px
+			width: 100%
+			border: 1px solid #333
+			border-radius: 12px
+			padding: 0 110px 0 45px
+			margin-right: 10px
+			display: block
+			background: #fff
+.inputWrapper
+	position relative
+	&_icon
+		position: absolute;
+		top: 53%;
+		font-size: 22px;
+		left: 10px;
+		transform: translate(0, -50%);
+		color: #a7a7a7
+	button.btn
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		transform: translate(0, -50%);
+		color #fff
+		&:hover
+			box-shadow none!important
 footer
 	padding 20px 0
 	color #fff
