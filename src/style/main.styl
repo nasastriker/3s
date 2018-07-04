@@ -6,6 +6,8 @@
 
 
 cyan = #40f3f7
+gr = #fff
+bl = rgba(0, 0, 255, .5)
 
 .fl-left
 	float left
@@ -40,8 +42,8 @@ button.btn
 			background transparent
 
 body
-	background: url(/img/head_bg.jpg) fixed center 0px
-	background-size: 120% 120%
+	background: url("../img/head_bg.jpg") fixed center 0px
+	background-size: inherit
 	transition: all 2s ease-out
 	background-repeat: no-repeat
 	font-family: 'Fira Sans', sans-serif
@@ -51,12 +53,57 @@ body
 	border: 0;
 	border-radius: 0;
 	background: #00000082;
-	margin: 25px 0 0;
+	margin: 0px 0 0;
 	position: absolute;
 	z-index: 2;
-	width: 100%;
+	width: 100%
+	padding 20px 0
+	.navbar-nav
+		li
+			&.active
+				a
+					background transparent
+					color cyan
+					&:hover
+						color cyan
+			&:hover
+				a
+					background transparent	
+			a
+				color #fff
+				text-transform uppercase
+				background transparent!important
+				padding: 5px 20px
+				font-size 16px
+				transition all .3s
+				&:after
+					content ''
+					display block
+					height: 1px;
+					width: 0%;
+					transition all .3s
+					background: #40f3f7;
+				&:hover
+				&:focus
+					outline none
+					color cyan
+				&:hover
+					&:after
+						width: 100%;
+			&:not(:last-child)
+				a
+					border-right 1px solid cyan
+	&-brand
+		padding 0
+		img
+			height 100%
+			width auto
+	&Menu
+		margin-left 15%
+	&-nav
+		margin-top 12px
 header
-	padding: 120px 0 0
+	padding: 150px 0 0
 	h1
 		text-align center
 		color #FFF
@@ -93,18 +140,19 @@ header
 				font-weight: 400
 				font-size: 15px
 			&Wrapper
-				width 330px
+				max-width 365px
+				width 100%
 				position relative
 				margin-bottom 60px
 				.vsBox
 					position: absolute
 					background: #fff
-					width: 180px
-					height: 180px
+					width: 150px
+					height: 150px
 					display: flex
 					align-items: center
 					border-radius: 50%
-					padding: 50px
+					padding: 30px
 					top: 50%
 					left: 0%
 					transform: translate(-50%, -50%)
@@ -133,7 +181,7 @@ section
 		text-align center
 		color #fff
 .ourAdvertisers
-	background: #fff url(/img/moon.png) no-repeat
+	background: #fff url("../img/moon.png") no-repeat
 	background-position: 50% 351px;
 	background-size: 85%
 	padding: 40px 0 180px
@@ -208,6 +256,124 @@ section
 footer
 	padding 20px 0
 	color #fff
-			
-				
-		
+	.f-logo
+		display block
+		margin-bottom 10px
+	.copy
+		font-size 10px
+	ul
+		list-style none
+		a
+			color cyan
+			&:hover
+				color #fff
+				text-decoration none
+	.c-item
+		div
+			color cyan
+		&:first-child
+			margin-bottom 10px
+
+.loaderAreaWrapper
+	background: #000
+	// background: linear-gradient(140deg, #00BCD4 -58%, #000 90%)
+	overflow: hidden
+	position: fixed
+	left: 0
+	top: 0
+	right:0
+	bottom:0
+	z-index: 100000
+
+@keyframes rotate{
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotate2 {
+	0% {
+		transform: rotate(0deg);
+		border-top-color:gr;
+	}
+	50% {
+		transform: rotate(180deg);
+		border-top-color: blue;
+	}
+	100% {
+		transform: rotate(360deg);
+		border-top-color:gr;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+loaderDivMixin()
+	border-radius: 50%;
+	padding: 8px;
+	border: 2px solid transparent;
+	animation: rotate linear 3.5s infinite;
+
+.loader {
+	position: fixed;
+	margin: 0;
+	width: 150px;
+	height: 150px;
+	display: block;
+	overflow: hidden;
+	top: 50%;
+	left: 50%;
+	margin-top: -75px;
+	margin-left: -75px;
+	div {
+		height: 100%;
+	}
+}
+
+/* loader 1 */
+.loader1, .loader1 div {
+	loaderDivMixin()
+	border-top-color: gr;
+	border-bottom-color: cyan
+}
+
+/*loader 2  */
+.loader2, .loader2 div {
+	loaderDivMixin()
+	border-top-color: cyan
+	border-left-color: gr;
+	border-right-color: gr;
+}
+
+/*loader 3  */
+.loader3, .loader3 div {
+	loaderDivMixin()
+	border-top-color: gr;
+	border-left-color: cyan
+	animation-timing-function: cubic-bezier(.55, .38, .21, .88);
+	animation-duration: 3s;
+}
+
+/* loader 4 */
+.loader4, .loader4 div {
+	loaderDivMixin()
+	border-radius: 50%;
+	padding: 4px;
+	animation: rotate2 4s infinite linear;
+}
+
+div:hover {
+	animation-play-state: paused;
+}
+
+.loader, .loader * {
+	will-change: transform;
+}
