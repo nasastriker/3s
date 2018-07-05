@@ -102,6 +102,27 @@ body
 		margin-left 15%
 	&-nav
 		margin-top 12px
+	.langChoise
+		background #02707d
+		border-radius: 20px
+		margin-top 0
+		li
+			a
+				border: none !important;
+				width: 50px;
+				height: 50px;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 50%;
+				transition: all .5s;
+				&.active
+					color: #35bfc4;
+					background: #fff;
+					background: #fff!important;
+				&:after
+					width 0!important
 header
 	padding: 150px 0 0
 	h1
@@ -123,6 +144,13 @@ header
 				border-radius: 10px
 				color #0d202f
 				margin 30px 0
+				border-radius: 10px
+				color: #0d202f
+				margin: 30px 0
+				min-width: 200px
+				padding: 10px 30px
+				display: inline-block
+				text-align: center
 			&:first-child
 				color #fff
 				text-align left
@@ -138,9 +166,9 @@ header
 				list-style none
 				margin-bottom 30px
 				font-weight: 400
-				font-size: 15px
+				font-size: 18px
 			&Wrapper
-				max-width 365px
+				padding 0 60px
 				width 100%
 				position relative
 				margin-bottom 60px
@@ -157,6 +185,12 @@ header
 					left: 0%
 					transform: translate(-50%, -50%)
 					box-shadow: 3px 8px 20px #0000008a
+			.btn
+				font-size: 18px;
+				text-decoration: none;
+				min-width: 200px;
+				padding: 10px 30px;
+				display: inline-block;
 .separator
 	display: flex
 	justify-content: center
@@ -182,7 +216,7 @@ section
 		color #fff
 .ourAdvertisers
 	background: #fff url("../img/moon.png") no-repeat
-	background-position: 50% 351px;
+	background-position: 50% 130%;
 	background-size: 85%
 	padding: 40px 0 180px
 	position relative
@@ -202,7 +236,29 @@ section
 		&:before
 		&:after
 			content ''
-			background #00000094 
+			background #00000094
+	.partners-list
+		text-align center
+		span
+			display: inline-block;
+			margin: 10px;
+			width: 100px;
+			height: 100px;
+			img 
+				max-width: 100px
+				max-height: 100px
+		.hide-list
+			display none 
+		.yellowGrd
+			text-decoration none
+			font-size 16px
+			box-shadow none!important
+		.partners-other
+			height 0
+			transition all .5s
+			overflow hidden
+			&.normal
+				height 100%
 .casesNews
 	color #fff
 	padding 40px 0
@@ -219,12 +275,16 @@ section
 	background cyan
 	padding 30px 0
 	margin 10px 0 20px
+	&Wrapper
+		display flex
+		align-items: center;
 	p
 		font-size: 18px
 		max-width: 400px
 		font-weight: 500
 		text-align: right
 		float: right
+		margin-bottom 0
 	form
 		display flex
 		input
@@ -273,6 +333,19 @@ footer
 			color cyan
 		&:first-child
 			margin-bottom 10px
+	.socialBoxesWrapper
+		a
+			display: flex
+			background: #40f3f7
+			border-radius: 50%
+			padding: 6px
+			width: 36px
+			height: 36px
+			transition all .3s
+			float: left;
+			margin-right: 10px;
+			&:hover
+				background #fff
 
 .loaderAreaWrapper
 	background: #000
@@ -377,3 +450,134 @@ div:hover {
 .loader, .loader * {
 	will-change: transform;
 }
+
+.owl-carousel
+	.owl-dots
+		margin-top 30px
+		&.disabled
+			display block
+	.owl-nav
+		display none
+		position relative
+		button
+			position absolute
+.owl-theme
+	.owl-dots
+		.owl-dot
+			&.active 
+			&:hover 
+				span
+					background: #ffffff
+			span
+				background cyan
+
+@media screen and (max-width: 991px)
+	header
+		.headDescription_item
+			ul
+				font-size 15px
+			&Wrapper
+				padding 0 50px
+				.vsBox
+					width: 120px
+					height: 120px
+	.navbar-brand
+		display: flex
+		align-items: center
+		img
+			height: 100%
+			width: 45px
+			height: auto
+	.navbarMenu
+		margin-left 0
+	.navbar
+		.navbar-nav
+			li
+				a
+					font-size 14px
+@media screen and (max-width: 767px)
+	body
+		background-position: center 0px!important
+	.navbar
+		.navbar-nav
+			li
+				a
+					border none!important
+					padding 10px 0
+					&:after
+						content: '';
+						width: 0%!important
+		&-default
+			.navbar-toggle
+				border-color: transparent
+				background-color: transparent!important
+				.icon-bar
+					background-color: #fff
+		&-collapse
+			text-align center	
+		.navbarMenu
+			margin: 7.5px -15px
+			text-align center
+		.langChoise
+			display inline-block
+			li
+				display inline-block
+	header
+		.headDescription
+			&_item
+				&:nth-child(2)
+					text-align: center;
+					width: 100%;
+					clear: both;
+					padding-top 50px
+					padding-bottom 30px
+				&:first-child
+					color: #fff;
+					text-align: center;
+					padding-bottom: 50px;
+					overflow: hidden;
+			&_itemWrapper 
+				.vsBox
+					width: 120px;
+					height: 120px;
+					padding: 30px;
+					top: 0%;
+					left: 50%;
+					transform: translate(-50%, -100%)
+	.ourAdvertisers
+		background: #fff url(../img/moon.png) no-repeat
+		background-position: 50% 109% !important
+		background-size: 85%
+		img
+			margin-bottom 40px
+	.casesNews
+		padding 40px 20px
+	.subscrabeBox
+		p
+			font-size: 18px
+			max-width: 400px
+			font-weight: 500
+			text-align: center
+			float: none
+		.inputWrapper
+			width: 100%
+			input
+				padding: 0 70px 0 40px
+	footer
+		text-align center
+		.f-logo
+			img
+				width 100px
+		.copy
+			font-size: 10px
+			display: inline-block
+			margin-bottom: 20px
+		ul
+			margin-bottom 30px
+		.socialBoxes
+			margin-top 30px
+			&Wrapper
+				display: flex
+				justify-content: center
+				a
+					float none

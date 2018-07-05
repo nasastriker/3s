@@ -27,7 +27,19 @@ $('.casesNews-carousel').owlCarousel({
             items:2,
             margin: 40    
         }
-    }
+    },
+    nav:true,
+});
+$(document).ready(function() {
+	$( ".partners-list-btn" ).on('click', function() {
+		$( ".partners-list-btn" ).toggleClass('active');
+		$( ".partners-other" ).toggleClass('normal');
+		$( ".show-list, .hide-list" ).toggle();
+	});
+	$( ".langChoise a" ).on('click', function() {
+		$( ".langChoise a" ).toggleClass('active');
+	});
+	
 });
 
 $(window).scroll(function () {
@@ -39,6 +51,6 @@ $(window).scroll(function () {
 	});
 
 	$('.ourAdvertisers').css({
-		backgroundPosition: '50% ' + (movement + 400) + 'px'
+		//backgroundPosition: '50% ' + (movement + 400) + 'px'
 	});
 });
