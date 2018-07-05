@@ -30,6 +30,7 @@ $('.casesNews-carousel').owlCarousel({
     },
     nav:true,
 });
+
 $(document).ready(function() {
 	$( ".partners-list-btn" ).on('click', function() {
 		$( ".partners-list-btn" ).toggleClass('active');
@@ -39,7 +40,15 @@ $(document).ready(function() {
 	$( ".langChoise a" ).on('click', function() {
 		$( ".langChoise a" ).toggleClass('active');
 	});
-	
+
+    var actPage = $('content').attr("class");
+
+	$('.navbarMenu a').each(function(){
+        var actMenu = $(this).data('href');
+        if( actMenu == actPage){
+            $(this).closest('li').addClass('active')
+        }
+    });
 });
 
 $(window).scroll(function () {
