@@ -53,7 +53,6 @@ $(document).ready(function() {
 
 $(window).scroll(function () {
 	var movement = -parseInt($(this).scrollTop() / 10);
-	console.log(movement);
 
 	$('body').css({
 		backgroundPosition: 'center ' + movement + 'px'

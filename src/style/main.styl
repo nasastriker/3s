@@ -13,7 +13,8 @@ bl = rgba(0, 0, 255, .5)
 	float left
 .fl-right
 	float right
-	
+.btnCenterRow
+	text-align center
 img
 	width 100%
 a.btn
@@ -489,6 +490,36 @@ div:hover {
 		line-height 50px
 	textarea
 		height 250px
+	.btn.yellowGrd
+		font-size: 20px;
+		text-transform: uppercase;
+		padding: 15px 40px;
+		margin-top: 40px;
+.contacts
+	header
+		background: url("../img/sunset.png") no-repeat
+		background-position: 50% 100%;
+		background-size: 100%
+		position relative
+		padding-bottom 100px
+	&__mapBox
+		position relative
+		#map
+			height: 430px
+			margin-bottom: 20px
+			border-top: 3px solid #018795
+			border-bottom: 3px solid #018795
+		.mapInfoBox
+			position: absolute
+			z-index: 2
+			background: #018795d6
+			padding: 30px 40px
+			line-height: 30px
+			color: #fff
+			top: 50%
+			left: 20%
+			font-size: 18px
+			transform: translate(0, -50%)
 // ======================================================================== //
 @media screen and (max-width: 991px)
 	header
@@ -524,7 +555,7 @@ div:hover {
 					border none!important
 					padding 10px 0
 					&:after
-						content: '';
+						content: ''
 						width: 0%!important
 		&-default
 			.navbar-toggle

@@ -39,7 +39,7 @@
 
 						<ul class="nav navbar-nav navbarMenu">
 							<li><a data-href="main" href="index.html">Кто мы</a></li>
-							<li><a data-href="rec" href="#ourAdvertisers">Рекламодатели</a></li>
+							<li><a data-href="rec" href="index.html#ourAdvertisers">Рекламодатели</a></li>
 							<li><a data-href="blog" href="blog.html">Блог</a></li>
 							<li><a data-href="vakancy" href="#">Вакансии</a></li>
 							<li><a data-href="contacts" href="contacts.html">Контакты</a></li>
@@ -56,8 +56,8 @@
 	</nav>
 
 <content class="contacts">
-	<div class="container">
 		<header>
+	<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
 					<h1>Отправить сообщение</h1>
@@ -106,13 +106,249 @@
 									<textarea placeholder="Текст сообщения"></textarea>
 								</div>
 							</div>
+
+							<div class="col-xs-12"></div>
+							<div class="col-xs-12 btnCenterRow">
+								<a href="#" class="btn yellowGrd">Отправить</a>
+							</div>
 						</div>
 					</form>
 				</div>
 			</div>
+	</div>
 		</header>
-	</div>	
+
 </content>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyA240e-WSUR6LGo2_-D3PXWmiEDGW4ei2M&libraries=places,geometry"></script>
+<section class="contacts">
+	<div class="contacts__mapBox">
+		<div id="map"></div>
+		<div class="mapInfoBox">
+			Gladstonos, 116<br>3032<br>Limassol<br>Cyprus
+		</div>
+		<script type="text/javascript">
+
+        	var map;
+
+	        function initMap() {
+	            map = new google.maps.Map(document.getElementById('map'), {
+	                center: {lat: 34.69918337331899, lng: 33.04666967840419},
+	                zoom: 15,
+	                styles: [
+					  {
+					    "elementType": "geometry",
+					    "stylers": [
+					      {
+					        "color": "#f5f5f5"
+					      }
+					    ]
+					  },
+					  {
+					    "elementType": "labels.icon",
+					    "stylers": [
+					      {
+					        "visibility": "off"
+					      }
+					    ]
+					  },
+					  {
+					    "elementType": "labels.text.fill",
+					    "stylers": [
+					      {
+					        "color": "#616161"
+					      }
+					    ]
+					  },
+					  {
+					    "elementType": "labels.text.stroke",
+					    "stylers": [
+					      {
+					        "color": "#f5f5f5"
+					      }
+					    ]
+					  },
+					  {
+					    "featureType": "administrative",
+					    "elementType": "geometry",
+					    "stylers": [
+					      {
+					        "visibility": "off"
+					      }
+					    ]
+					  },
+					  {
+					    "featureType": "administrative.land_parcel",
+					    "elementType": "labels.text.fill",
+					    "stylers": [
+					      {
+					        "color": "#bdbdbd"
+					      }
+					    ]
+					  },
+					  {
+					    "featureType": "poi",
+					    "stylers": [
+					      {
+					        "visibility": "off"
+					      }
+					    ]
+					  },
+					  {
+					    "featureType": "poi",
+					    "elementType": "geometry",
+					    "stylers": [
+					      {
+					        "color": "#eeeeee"
+					      }
+					    ]
+					  },
+					  {
+					    "featureType": "poi",
+					    "elementType": "labels.text.fill",
+					    "stylers": [
+					      {
+					        "color": "#757575"
+					      }
+					    ]
+					  },
+					  {
+					    "featureType": "poi.park",
+					    "elementType": "geometry",
+					    "stylers": [
+					      {
+					        "color": "#e5e5e5"
+					      }
+					    ]
+					  },
+					  {
+					    "featureType": "poi.park",
+					    "elementType": "labels.text.fill",
+					    "stylers": [
+					      {
+					        "color": "#9e9e9e"
+					      }
+					    ]
+					  },
+					  {
+					    "featureType": "road",
+					    "elementType": "geometry",
+					    "stylers": [
+					      {
+					        "color": "#ffffff"
+					      }
+					    ]
+					  },
+					  {
+					    "featureType": "road",
+					    "elementType": "labels.icon",
+					    "stylers": [
+					      {
+					        "visibility": "off"
+					      }
+					    ]
+					  },
+					  {
+					    "featureType": "road.arterial",
+					    "elementType": "labels.text.fill",
+					    "stylers": [
+					      {
+					        "color": "#757575"
+					      }
+					    ]
+					  },
+					  {
+					    "featureType": "road.highway",
+					    "elementType": "geometry",
+					    "stylers": [
+					      {
+					        "color": "#dadada"
+					      }
+					    ]
+					  },
+					  {
+					    "featureType": "road.highway",
+					    "elementType": "labels.text.fill",
+					    "stylers": [
+					      {
+					        "color": "#616161"
+					      }
+					    ]
+					  },
+					  {
+					    "featureType": "road.local",
+					    "elementType": "labels.text.fill",
+					    "stylers": [
+					      {
+					        "color": "#9e9e9e"
+					      }
+					    ]
+					  },
+					  {
+					    "featureType": "transit",
+					    "stylers": [
+					      {
+					        "visibility": "off"
+					      }
+					    ]
+					  },
+					  {
+					    "featureType": "transit.line",
+					    "elementType": "geometry",
+					    "stylers": [
+					      {
+					        "color": "#e5e5e5"
+					      }
+					    ]
+					  },
+					  {
+					    "featureType": "transit.station",
+					    "elementType": "geometry",
+					    "stylers": [
+					      {
+					        "color": "#eeeeee"
+					      }
+					    ]
+					  },
+					  {
+					    "featureType": "water",
+					    "elementType": "geometry",
+					    "stylers": [
+					      {
+					        "color": "#c9c9c9"
+					      }
+					    ]
+					  },
+					  {
+					    "featureType": "water",
+					    "elementType": "geometry.fill",
+					    "stylers": [
+					      {
+					        "color": "#00ffff"
+					      }
+					    ]
+					  },
+					  {
+					    "featureType": "water",
+					    "elementType": "labels.text.fill",
+					    "stylers": [
+					      {
+					        "color": "#9e9e9e"
+					      }
+					    ]
+					  }
+					]
+	            });
+	            var marker = new google.maps.Marker({
+				    position: {lat: 34.69918337331899, lng: 33.04666967840419},
+				    map: map,
+				    title: '8801 River Crossing Blvd Suite 140 Indianapolis, IN 46240',
+				    icon: 'img/map-localization@2x.png'
+				});
+	        }
+	        initMap();
+	    </script>
+	</div>
+</section>
 
 
 <footer>
