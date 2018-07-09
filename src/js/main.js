@@ -31,6 +31,12 @@ $('.casesNews-carousel').owlCarousel({
     nav:true,
 });
 
+(function($) {
+    $(function() {
+        $('select').styler();
+    });
+})(jQuery);
+
 $(document).ready(function() {
 	$( ".partners-list-btn" ).on('click', function() {
 		$( ".partners-list-btn" ).toggleClass('active');
