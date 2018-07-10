@@ -12,7 +12,9 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="css/jquery.formstyler.css">
 	<link rel="stylesheet" href="css/jquery.formstyler.theme.css">
+	<link rel="stylesheet" href="css/jquery.jscrollpane.css">
 	
+
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700,800,900&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -68,20 +70,30 @@
 				</div>
 
 				<div class="col-sm-8 col-sm-offset-2">
-					<form class="contactForm">
+					<form class="contactForm" autocomplete="off">
 						<div class="row">
 							<div class="col-xs-12">
-								<div class="inputWrapper">
+								<div class="inputWrapper selectboxWrapper">
 									<img src="img/ico/c_star.png" class="inputIco">
 
-									<select name="theme">
+									<select name="theme" placeholder="Выбор темы">
 										<option value="">Выбор темы</option>
-										<option value="">Выбор темы</option>
-										<option value="">Выбор темы</option>
-										<option value="">Выбор темы</option>
+										<option value="">Easy to implement</option>
+										<option value="">No fixed height or width needed</option>
+										<option value="">Supports responsive design</option>
+										<option value="">Customizable CSS</option>
+										<option value="">Standard browser scroll behaviour</option>
+										<option value="">Supports vertical and horizontal scrollbars or both</option>
+										<option value="">Automatically re-initializes scrollbars</option>
+										<option value="">Supports external scrollbars</option>
+										<option value="">Provides a AngularJS directive</option>
+										<option value="">Supports the use as textarea scrollbar</option>
+										<option value="">Browser support: IE7+, Edge, Firefox, Opera, Chrome, Safari</option>
 									</select>
 								</div>
 							</div>
+						</div>
+						<div class="row">
 							<div class="col-sm-6">
 								<div class="inputWrapper">
 									<img src="img/ico/c_man.png" class="inputIco">
@@ -102,9 +114,14 @@
 								</div>
 							</div>
 							<div class="col-sm-6">
-								<div class="inputWrapper">
-									<img src="img/ico/c_phone.png" class="inputIco">
-									<input type="phone" name="phone" placeholder="2342354">
+								<div class="inputWrapper phoneWrapper">
+									<span class="inputPhoneIcoWrapper">
+										<img src="img/ico/c_phone.png" class="inputIco">
+									</span>
+									<span class="inputPhoneCodeWrapper">
+										<input type="phone" name="code" id="code" placeholder="+ 7">
+									</span>
+									<input type="phone" id="phone" name="phone" placeholder="(   ) ____ - _____">
 								</div>
 							</div>
 
@@ -430,6 +447,9 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.formstyler.min.js"></script>
+<script src="js/jquery.mousewheel.js"></script>
+<script src="js/jquery.jscrollpane.min.js"></script>
+<script src="js/jquery.mask.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

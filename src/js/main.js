@@ -38,6 +38,13 @@ $('.casesNews-carousel').owlCarousel({
 })(jQuery);
 
 $(document).ready(function() {
+    $("#phone").mask("(999) 999-9999");
+    $("#code").mask("+ 9");
+    $('input').attr('autocomplete', 'false');
+
+    $('.jq-selectbox__select').on('click', function() {
+        $('.jq-selectbox__dropdown ul').jScrollPane();
+    });
 	$( ".partners-list-btn" ).on('click', function() {
 		$( ".partners-list-btn" ).toggleClass('active');
 		$( ".partners-other" ).toggleClass('normal');
